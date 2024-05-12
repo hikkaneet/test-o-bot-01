@@ -29,8 +29,9 @@ async def cmd_quiz(message: types.Message):
     await new_quiz(message)
 
 
-# Хэндлер для кнопки "Статистика"
+# Хэндлер на команды /stats
 @router.message(F.text == "Статистика")
+@router.message(Command("stats"))
 async def show_stats(message: types.Message):
     # Получаем статистику квиза
     stats = await get_quiz_stats()
