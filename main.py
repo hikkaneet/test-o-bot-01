@@ -6,6 +6,7 @@ import config
 from functions import create_table, create_answers_table
 from handlers import router
 
+
 # Запуск процесса поллинга новых апдейтов
 async def main():
     # Объект бота, token храниться в отдельном файле config.py
@@ -18,6 +19,7 @@ async def main():
     await create_table()
     await create_answers_table()
     await dp.start_polling(bot)
+
 
 if __name__ == "__main__":
     # Включаем логирование, чтобы не пропустить важные сообщения
